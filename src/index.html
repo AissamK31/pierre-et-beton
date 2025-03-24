@@ -13,15 +13,242 @@
   </head>
   <body>
     <!-- Section Header -->
-    <!-- Cette section contiendra la navigation et l'en-tête du site -->
+    <header>
+      <!-- Le contenu du header sera ajouté ici -->
+    </header>
 
     <!-- Section Services -->
-    <!-- Cette section présentera les services de maçonnerie -->
+    <article class="services">
+      <h2 style="color: #3498db">Nos services</h2>
+      <hr />
+      <section class="block-service">
+        <div class="card">
+          <div class="img-card macon"></div>
+          <h3>Maçonnerie</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            maxime exercitationem quae, similique velit laboriosam earum error.
+            Beatae asperiores, tempore animi optio voluptate facilis odit
+            consectetur. Aliquid error rerum numquam.
+          </p>
+        </div>
+        <div class="card">
+          <div class="img-card menuiserie"></div>
+          <h3>Pose de menuiserie</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            maxime exercitationem quae, similique velit laboriosam earum error.
+            Beatae asperiores, tempore animi optio voluptate facilis odit
+            consectetur. Aliquid error rerum numquam.
+          </p>
+        </div>
+        <div class="card">
+          <div class="img-card pavage"></div>
+          <h3>Pavage</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            maxime exercitationem quae, similique velit laboriosam earum error.
+            Beatae asperiores, tempore animi optio voluptate facilis odit
+            consectetur. Aliquid error rerum numquam.
+          </p>
+        </div>
+        <div class="card">
+          <div class="img-card cloture"></div>
+          <h3>Cloture</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            maxime exercitationem quae, similique velit laboriosam earum error.
+            Beatae asperiores, tempore animi optio voluptate facilis odit
+            consectetur. Aliquid error rerum numquam.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="txt">
+        <h2>
+          Nord Bâtiment Services : Votre partenaire en rénovation et
+          construction
+        </h2>
+        <p>
+          Vous cherchez un expert pour vos travaux de rénovation ou
+          d'aménagement ? Nord Bâtiment Services met à votre disposition son
+          savoir-faire pour donner vie à vos projets. Basés à Lille, nous
+          accompagnons particuliers et professionnels dans tous types de travaux
+          : rénovation intérieure et extérieure, aménagement sur mesure,
+          maçonnerie, électricité, plomberie, peinture et revêtements.
+        </p>
+        <p>
+          Un service clé en main : De la conception aux finitions, nous prenons
+          en charge l'ensemble de votre chantier avec un engagement sur la
+          qualité et les délais. <br />
+          Des solutions adaptées : Nous étudions vos besoins pour proposer des
+          prestations sur mesure, quel que soit votre budget. <br />
+          Une équipe qualifiée : Nos artisans expérimentés garantissent un
+          travail soigné et durable
+        </p>
+        <p>
+          📞 Besoin d'un devis ou d'un conseil ? Contactez-nous au
+          07.45.32.10.98 ou via notre site web. Nous intervenons sur Lille et
+          dans toute la région Hauts-de-France. Faites confiance à Nord Bâtiment
+          Services pour des travaux réussis en toute sérénité ! 🏗✨
+        </p>
+      </section>
+    </article>
 
     <!-- Section Contact -->
-    <!-- Cette section contiendra le formulaire de contact -->
+    <main class="contact-container">
+      <section class="contact-header">
+        <div class="contact-title">
+          <span class="subtitle">CONTACT</span>
+          <h1>Discutons De Votre Projet</h1>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <p class="required-fields">* Champs obligatoires</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">NOM ET PRÉNOM*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Entrez votre nom complet"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">TÉLÉPHONE*</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Entrez votre téléphone"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-MAIL*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Entrez votre e-mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">VILLE*</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Entrez votre adresse"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">PRESTATIONS</label>
+              <select name="service" id="service" required>
+                <option value="" disabled selected>- Prestations -</option>
+                <option value="maconnerie">Maçonnerie</option>
+                <option value="menuiserie">Pose de Menuiserie</option>
+                <option value="pavage">Pavage</option>
+                <option value="cloture">Clôture</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="file">FICHIERS</label>
+              <input type="file" id="file" name="file" class="file-input" />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">MESSAGE*</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Écrivez votre message..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">Je ne suis pas un robot*</label>
+            <p class="privacy-link">
+              <a href="#"
+                >En savoir plus sur la gestion de vos données à caractère
+                personnel et vos droits</a
+              >
+            </p>
+          </div>
+
+          <div class="form-group submit-group">
+            <button type="submit" class="submit-button">VALIDER</button>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <!-- Section Footer -->
-    <!-- Cette section contiendra le pied de page -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>À propos de Pierre-Et-Beton</h2>
+          <p>
+            Avec plus de 60 ans d'expérience, Pierre-Et-Beton est spécialisée
+            dans les travaux de maçonnerie, offrant des services de qualité dans
+            la région.
+            <br /><br />
+            Nous sommes une entreprise familiale qui a su se développer grâce à
+            notre engagement envers la qualité et le service.
+            <br /><br />
+            Travailler avec nous, c'est :
+            <br /><br />
+            -Une équipe de professionnels qualifiés<br />
+            -Des solutions innovantes et adaptées à vos besoins<br />
+            -Un service personnalisé et attentif<br />
+            -Un prix juste et transparent<br />
+          </p>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact</h2>
+          <p>Téléphone : 06 00 00 00 00</p>
+          <p>Email : contact@pierre-et-beton.com</p>
+          <p>Adresse : 123 Rue de la Maçonnerie, 59000 Lille, France</p>
+        </div>
+        <div class="footer-section services">
+          <h2>Nos Services</h2>
+          <ul>
+            <li><a href="#">Maçonnerie</a></li>
+            <li><a href="#">Pose de Menuiserie</a></li>
+            <li><a href="#">Pavage</a></li>
+            <li><a href="#">Clôture</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h2>Suivez-nous</h2>
+          <a href="https://www.facebook.com/pierreetbeton" target="_blank"
+            >Facebook</a
+          >
+          <a href="https://www.facebook.com/pierreetbeton" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.facebook.com/pierreetbeton" target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pierre-Et-Beton | Tous droits réservés</p>
+      </div>
+    </footer>
   </body>
 </html>
