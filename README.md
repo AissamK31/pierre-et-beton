@@ -208,3 +208,37 @@ git reset --soft HEAD~1
 - Informations de contact
 - Liens utiles
 - Copyright
+
+## ⚠️ IMPORTANT - Protection du travail d'équipe
+
+### Points de contrôle avant chaque action sur main
+
+- ✋ ARRÊTEZ-VOUS et vérifiez votre branche actuelle : `git branch`
+- ✋ NE JAMAIS utiliser `git push -f` sur main
+- ✋ NE JAMAIS supprimer la branche main
+
+### Étapes sécurisées pour merger dans main
+
+```bash
+# 1. Sauvegardez d'abord votre travail
+git add .
+git commit -m "type(section): votre message"
+
+# 2. Mettez à jour votre branche avec main
+git checkout main
+git pull origin main          # Récupérer les derniers changements
+git checkout feature/[votre-section]
+git merge main               # Mettre à jour votre branche
+
+# 3. Seulement si l'étape 2 est OK :
+git checkout main
+git merge feature/[votre-section]
+git push origin main
+```
+
+### En cas de problème
+
+- STOP : Ne paniquez pas
+- NE PAS utiliser de commandes destructives (`git push -f`, `git reset --hard`)
+- DEMANDEZ de l'aide à vos coéquipiers
+- FAITES une copie de votre travail si nécessaire
