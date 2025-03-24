@@ -1,11 +1,39 @@
 # Pierre & Béton - Projet Collaboratif
 
-## 🎯 Objectif du projet
+## 📋 Vue d'ensemble
+
+### 🎯 Objectif du projet
 
 Création collaborative d'une page d'accueil pour une entreprise de maçonnerie.
 Chaque équipier est responsable d'une partie spécifique du site.
 
-## 📋 Structure du projet
+### 🎯 Répartition des tâches
+
+#### Équipier 1 - Header
+
+- Navigation
+- Logo
+- En-tête du site
+
+#### Équipier 2 - Services
+
+- Liste des services
+- Descriptions
+- Mise en page des services
+
+#### Équipier 3 - Contact
+
+- Formulaire de contact
+- Validation
+- Design du formulaire
+
+#### Équipier 4 - Footer
+
+- Informations de contact
+- Liens utiles
+- Copyright
+
+### Structure du projet
 
 ```bash
 pierre-et-beton/
@@ -35,14 +63,13 @@ pierre-et-beton/
 
 ## 🚀 Guide de démarrage
 
-### 1. Configuration initiale (Une seule fois)
+### 1. Prérequis et Installation
 
 #### Installation de Git
 
 1. Téléchargez Git depuis : <https://git-scm.com/downloads>
 2. Installez Git sur votre machine
 3. Ouvrez un terminal et vérifiez l'installation :
-
    ```bash
    git --version
    ```
@@ -55,40 +82,32 @@ git config --global user.name "Votre Nom"
 git config --global user.email "votre.email@exemple.com"
 ```
 
-### 2. Connexion à GitHub
+### 2. Configuration GitHub
 
 1. Créez un compte sur GitHub si ce n'est pas déjà fait
 2. Générez une clé SSH (recommandé) :
-
    ```bash
    ssh-keygen -t ed25519 -C "votre.email@exemple.com"
    ```
-
 3. Ajoutez la clé SSH à votre compte GitHub
 
-### 3. Démarrage du projet
-
-#### Clone du projet
+### 3. Installation du projet
 
 ```bash
 # Clonez le dépôt
 git clone [URL_DU_PROJET]
 cd pierre-et-beton
-```
 
-#### Création de votre branche
-
-```bash
 # Créez votre branche selon votre partie
 git checkout -b feature/[votre-section]
 # Exemple : git checkout -b feature/header
 ```
 
-## 👥 Workflow par équipier
+## 👥 Guide de travail
 
-### Checklist quotidienne
+### Workflow quotidien
 
-1. Avant de commencer à travailler :
+1. Avant de commencer :
 
    ```bash
    git pull origin main
@@ -105,17 +124,15 @@ git checkout -b feature/[votre-section]
 
    # Créez un commit
    git commit -m "type(section): description"
-   # Exemple : git commit -m "feat(header): ajouter la navigation"
    ```
 
-3. Pour partager votre travail :
+3. Partage du travail :
 
    ```bash
    git push origin feature/[votre-section]
    ```
 
-4. Pour fusionner votre travail dans main :
-
+4. Fusion avec main :
    ```bash
    git checkout main
    git pull origin main
@@ -123,122 +140,153 @@ git checkout -b feature/[votre-section]
    git push origin main
    ```
 
-## 🚨 Bonnes pratiques
+### 🚨 Bonnes pratiques
 
-### Commits
+#### Conventions de commit
 
-- Faites des commits réguliers et petits
-- Utilisez des messages de commit clairs
-- Suivez le format : `type(section): description`
+- Commits réguliers et petits
+- Messages clairs et descriptifs
+- Format : `type(section): description`
   - Types : feat, fix, style, docs
   - Exemple : `feat(header): ajouter le logo`
 
-### Branches
+#### Gestion des branches
 
-- Ne travaillez que sur votre branche
-- Gardez votre branche à jour avec `main`
+- Travail uniquement sur votre branche
+- Synchronisation régulière avec main
 
-## ❌ Erreurs courantes à éviter
+## ⚠️ Sécurité et protection du code
 
-### 1. Mauvaise branche
+### Points de contrôle critiques
 
-**Problème** : Vous travaillez sur la mauvaise branche
-**Solution** :
+- ✋ Vérifiez votre branche : `git branch`
+- ✋ Pas de `git push -f` sur main
+- ✋ Ne jamais supprimer main
 
-```bash
-# Vérifiez votre branche actuelle
-git branch
-
-# Changez de branche si nécessaire
-git checkout feature/[votre-section]
-```
-
-### 2. Conflits Git
-
-**Problème** : Conflits lors du merge
-**Solution** :
-
-1. Mettez à jour votre branche :
-
-   ```bash
-   git pull origin main
-   ```
-
-2. Résolvez les conflits dans votre éditeur
-3. Commitez les résolutions
-
-### 3. Commit accidentel
-
-**Problème** : Mauvais commit
-**Solution** :
+### Procédure de fusion sécurisée
 
 ```bash
-# Annuler le dernier commit (garde les modifications)
-git reset --soft HEAD~1
-```
-
-## 📞 Besoin d'aide ?
-
-- Demandez à vos coéquipiers
-- Consultez la documentation Git : <https://git-scm.com/doc>
-- Utilisez les ressources GitHub : <https://docs.github.com>
-
-## 🎯 Rappel des tâches par équipier
-
-### Équipier 1 - Header
-
-- Navigation
-- Logo
-- En-tête du site
-
-### Équipier 2 - Services
-
-- Liste des services
-- Descriptions
-- Mise en page des services
-
-### Équipier 3 - Contact
-
-- Formulaire de contact
-- Validation
-- Design du formulaire
-
-### Équipier 4 - Footer
-
-- Informations de contact
-- Liens utiles
-- Copyright
-
-## ⚠️ IMPORTANT - Protection du travail d'équipe
-
-### Points de contrôle avant chaque action sur main
-
-- ✋ ARRÊTEZ-VOUS et vérifiez votre branche actuelle : `git branch`
-- ✋ NE JAMAIS utiliser `git push -f` sur main
-- ✋ NE JAMAIS supprimer la branche main
-
-### Étapes sécurisées pour merger dans main
-
-```bash
-# 1. Sauvegardez d'abord votre travail
+# 1. Sauvegarde du travail
 git add .
 git commit -m "type(section): votre message"
 
-# 2. Mettez à jour votre branche avec main
+# 2. Synchronisation avec main
 git checkout main
-git pull origin main          # Récupérer les derniers changements
+git pull origin main
 git checkout feature/[votre-section]
-git merge main               # Mettre à jour votre branche
+git merge main
 
-# 3. Seulement si l'étape 2 est OK :
+# 3. Fusion finale
 git checkout main
 git merge feature/[votre-section]
 git push origin main
 ```
 
-### En cas de problème
+## 🔄 Gestion des versions et récupération
 
-- STOP : Ne paniquez pas
-- NE PAS utiliser de commandes destructives (`git push -f`, `git reset --hard`)
-- DEMANDEZ de l'aide à vos coéquipiers
-- FAITES une copie de votre travail si nécessaire
+### Consultation de l'historique
+
+```bash
+# Historique complet
+git log
+
+# Version simplifiée
+git log --oneline
+
+# Avec modifications
+git log -p
+```
+
+### Méthodes de récupération
+
+#### 1. Méthode sûre (recommandée)
+
+```bash
+# Créer un nouveau commit d'annulation
+git revert <commit-id>
+```
+
+✅ Avantages :
+
+- Préserve l'historique
+- Sûr pour le travail d'équipe
+- Réversible
+
+#### 2. Test temporaire
+
+```bash
+# Examiner une version
+git checkout <commit-id>
+
+# Retour à main
+git checkout main
+```
+
+#### 3. Solution d'urgence
+
+```bash
+# ⚠️ ATTENTION : Destructif
+git reset --hard <commit-id>
+```
+
+⚠️ Précautions :
+
+- Perte de l'historique récent
+- Risques pour l'équipe
+- Difficile à annuler
+
+### Bonnes pratiques de récupération
+
+1. **Préparation** :
+
+   - Noter l'ID du commit actuel
+   - Faire une sauvegarde
+
+2. **En cas de problème** :
+
+   - Préférer `git revert`
+   - Consulter l'équipe
+   - Documenter les actions
+
+3. **Prévention** :
+   - Commits fréquents
+   - Tests avant fusion
+   - Sauvegardes régulières
+
+## 📞 Support et ressources
+
+### Aide et documentation
+
+- Support équipe
+- Documentation Git : <https://git-scm.com/doc>
+- Ressources GitHub : <https://docs.github.com>
+
+### Résolution des problèmes courants
+
+#### 1. Mauvaise branche
+
+```bash
+# Vérification
+git branch
+
+# Correction
+git checkout feature/[votre-section]
+```
+
+#### 2. Conflits de fusion
+
+1. Mise à jour :
+
+   ```bash
+   git pull origin main
+   ```
+
+2. Résolution dans l'éditeur
+3. Commit des résolutions
+
+#### 3. Commit erroné
+
+```bash
+# Annulation du dernier commit
+git reset --soft HEAD~1
+```
