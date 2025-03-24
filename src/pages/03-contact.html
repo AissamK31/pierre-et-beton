@@ -3,10 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/03-contact.css" />
     <title>Contact - Pierre & Béton</title>
   </head>
   <body>
-    <!-- Votre code pour le formulaire de contact ici -->
+    <main class="contact-container">
+      <section class="contact-header">
+        <div class="contact-title">
+          <span class="subtitle">CONTACT</span>
+          <h1>Discutons De Votre Projet</h1>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <p class="required-fields">* Champs obligatoires</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">NOM ET PRÉNOM*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Entrez votre nom complet"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">TÉLÉPHONE*</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Entrez votre téléphone"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-MAIL*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Entrez votre e-mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">VILLE*</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Entrez votre adresse"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">PRESTATIONS</label>
+              <select name="service" id="service" required>
+                <option value="" disabled selected>- Prestations -</option>
+                <option value="maconnerie">Maçonnerie</option>
+                <option value="menuiserie">Pose de Menuiserie</option>
+                <option value="pavage">Pavage</option>
+                <option value="cloture">Clôture</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="file">FICHIERS</label>
+              <input type="file" id="file" name="file" class="file-input" />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">MESSAGE*</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Écrivez votre message..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">Je ne suis pas un robot*</label>
+            <p class="privacy-link">
+              <a href="#"
+                >En savoir plus sur la gestion de vos données à caractère
+                personnel et vos droits</a
+              >
+            </p>
+          </div>
+
+          <div class="form-group submit-group">
+            <button type="submit" class="submit-button">VALIDER</button>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>

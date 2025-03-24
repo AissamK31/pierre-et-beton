@@ -1,0 +1,387 @@
+/* Variables des couleurs - Ce sont des variables CSS qui permettent de réutiliser facilement les mêmes couleurs dans tout le code */
+:root {
+  --primary-color: #2c3e50; /* Couleur principale du site (bleu foncé) */
+  --accent-color: #3498db; /* Couleur d'accentuation (bleu clair) utilisée pour les éléments interactifs */
+  --background-color: #ecf0f1; /* Couleur de fond du site */
+  --text-color: #2c3e50; /* Couleur du texte principal */
+  --border-color: #bdc3c7; /* Couleur des bordures des éléments */
+  --white: #ffffff; /* Couleur blanche pure */
+  --error-color: #da3c2e; /* Couleur pour les messages d'erreur */
+  --success-color: #27ae60; /* Couleur pour les messages de succès */
+}
+
+/* Animations - Définition des effets d'animation qui seront utilisés dans le formulaire */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* L'élément commence invisible */
+    transform: translateY(10px); /* Et légèrement décalé vers le bas */
+  }
+  to {
+    opacity: 1; /* L'élément devient visible */
+    transform: translateY(0); /* Et revient à sa position normale */
+  }
+}
+
+@keyframes gentleGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container principal */
+.contact-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* En-tête */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+/* Section formulaire */
+.contact-form-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.required-fields {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Grille du formulaire */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+label {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* États des champs */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--accent-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+}
+
+/* Textarea */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Select personnalisé - Style spécial pour la liste déroulante des prestations */
+select {
+  cursor: pointer; /* Change le curseur en main au survol */
+  appearance: none; /* Supprime le style par défaut du navigateur */
+  padding-right: 2rem; /* Espace à droite pour la flèche */
+  background-color: var(--white);
+  border: 2px solid var(--border-color); /* Bordure grise standard */
+  border-radius: 6px; /* Coins arrondis */
+  transition: all 0.3s ease; /* Animation douce pour tous les changements */
+}
+
+/* Style au survol du select */
+select:hover {
+  border-color: var(--accent-color); /* La bordure devient bleue au survol */
+}
+
+/* Style quand le select est sélectionné */
+select:focus {
+  outline: none; /* Supprime le contour par défaut du navigateur */
+  border-color: var(--accent-color);
+  transform: translateY(-2px); /* Léger effet de soulèvement */
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1); /* Ombre douce */
+}
+
+/* Style de l'option désactivée (placeholder) */
+select option[disabled] {
+  color: var(--border-color);
+}
+
+/* Zone de fichier */
+.file-input {
+  border: 2px dashed var(--accent-color);
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgba(52, 152, 219, 0.05);
+  transition: all 0.3s ease;
+}
+
+.file-input:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Checkbox personnalisée */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.checkbox-group input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-group label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+.checkbox-group label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--white);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-group label:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label:before {
+  background-color: var(--accent-color);
+}
+
+.checkbox-group input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/* Lien de confidentialité */
+.privacy-link {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  width: 100%;
+  padding-left: 28px;
+}
+
+.privacy-link a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy-link a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+/* Bouton de soumission */
+.submit-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* État de chargement du bouton */
+.submit-button.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.submit-button.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: rotate 0.8s linear infinite;
+}
+
+/* Messages d'erreur - Style des champs invalides */
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(
+    --border-color
+  ); /* Utilise la couleur de bordure standard même pour les champs invalides */
+  transition: border-color 0.3s ease;
+}
+
+/* Responsive - Adaptations pour les petits écrans */
+@media (max-width: 768px) {
+  /* La grille passe en une seule colonne sur mobile */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Ajustements des marges et espacements pour mobile */
+  .contact-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  /* Titre plus petit sur mobile pour mieux s'adapter */
+  h1 {
+    font-size: 1.8rem;
+  }
+}
