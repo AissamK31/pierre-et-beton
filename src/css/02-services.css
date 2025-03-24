@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.services{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ h2 {
+    font-size: 36px;
+}
+.block-service {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    height: 460px;
+    width: 350px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 12px 12px 2px 1px #2c3e50;
+    border: 0.5px solid  #2c3e50;
+}
+
+.img-card {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border: 0.5px solid  #2c3e50;
+}
+
+.card h3 {
+    font-size: 28px;
+}
+
+.card p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+.pavage {
+    background: url("../images/02-services/pavage.jpg");
+    background-size: cover;
+}
+
+.cloture {
+    background: url("../images/02-services/cloture.jpg");
+    background-size: cover;
+}
+
+.menuiserie {
+    background: url("../images/02-services/menuiserie.jpg");
+    background-size: cover;
+}
+
+.macon {
+    background: url("../images/02-services/macon.jpg");
+    background-size: cover;
+}
+
+
+.txt {
+    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    font-size: 18px;
+    background-color:  #2c3e50;
+    color: #ecf0f1 ;
+}
+.txt p {
+    width: 80%;
+   text-align: justify;
+}
