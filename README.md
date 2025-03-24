@@ -114,6 +114,15 @@ git checkout -b feature/[votre-section]
    git push origin feature/[votre-section]
    ```
 
+4. Pour fusionner votre travail dans main :
+
+   ```bash
+   git checkout main
+   git pull origin main
+   git merge feature/[votre-section]
+   git push origin main
+   ```
+
 ## 🚨 Bonnes pratiques
 
 ### Commits
@@ -127,7 +136,6 @@ git checkout -b feature/[votre-section]
 ### Branches
 
 - Ne travaillez que sur votre branche
-- Ne modifiez jamais directement la branche `main`
 - Gardez votre branche à jour avec `main`
 
 ## ❌ Erreurs courantes à éviter
@@ -168,14 +176,6 @@ git checkout feature/[votre-section]
 # Annuler le dernier commit (garde les modifications)
 git reset --soft HEAD~1
 ```
-
-## 🔄 Processus de Pull Request
-
-1. Allez sur GitHub
-2. Sélectionnez votre branche
-3. Cliquez sur "New Pull Request"
-4. Décrivez vos changements
-5. Attendez la revue
 
 ## 📞 Besoin d'aide ?
 
